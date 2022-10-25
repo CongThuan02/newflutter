@@ -22,7 +22,7 @@ class TaskList extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<TaskBloc, TaskState>(
       listener: (context, state) {
-        print(state.allTasks);
+
       },
       child: BlocBuilder<TaskBloc, TaskState>(
         builder: (context, state) {
@@ -34,6 +34,7 @@ class TaskList extends StatelessWidget {
               shrinkWrap: true,
               itemCount: state.allTasks.length,
               itemBuilder: (_, index) {
+                var task = tasks[index];
                 return Padding(
                   padding: const EdgeInsets.only(left: 10),
                   child: Row(
@@ -44,16 +45,12 @@ class TaskList extends StatelessWidget {
                         children: [
                           IconButton(
                             icon: const Icon(Icons.delete),
-                            onPressed: () {
-                              // tasksList.movie(index);
-                            },
+                            onPressed: () => context.read<TaskBloc>().add(DeleteTask(task: task))
                           ),
                           Checkbox(
                             key: UniqueKey(),
                             value: state.allTasks[index].isDone,
                             onChanged: (value) {
-                              print("------");
-                              print(state.allTasks[index].isDone);
                               context.read<TaskBloc>().add(UpdateTask(task: tasks[index]));
                             },
                           )

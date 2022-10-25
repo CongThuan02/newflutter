@@ -25,15 +25,7 @@ class UpdateTask extends TaskEvent {
   @override 
   List<Object> get props => [task];
 
-  // @override
-  // int get hashCode => task.hashCode;
 
-  // @override
-  // bool operator ==(Object o) {
-  //   if (identical(this, o)) return true;
-
-  //   return o is UpdateTask && o.task == task;
-  // }
 }
 
 class DeleteTask extends TaskEvent {

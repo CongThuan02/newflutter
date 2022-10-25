@@ -1,20 +1,20 @@
 import 'package:appmobu/screens/tasks_screen.dart';
 import 'package:flutter/material.dart';
-import 'blocs/bloc/task_bloc.dart';
+import 'package:path_provider/path_provider.dart';
+
 import 'blocs/bloc_exports.dart';
 // ignore: unused_import
 import 'models/task.dart';
 
-void main() {
-  // ignore: deprecated_member_use
-  // BlocOverrides.runZoned(() => runApp(BlocProvider(
-  //       create: (context) => TaskBloc(),
-  //       child: MyApp(),
-  //     )));
-  runApp(BlocProvider(
-    create: (context) => TaskBloc(),
-    child: const MyApp(),
-  ));
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final storage = await HydratedStorage.build(
+    storageDirectory: await getApplicationDocumentsDirectory(),
+  );
+  HydratedBlocOverrides.runZoned(
+    () => runApp(const MyApp()),
+    storage: storage,
+  );
 }
 
 class MyApp extends StatelessWidget {

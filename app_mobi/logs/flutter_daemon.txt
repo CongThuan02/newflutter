@@ -1,0 +1,33 @@
+!! PLEASE REVIEW THIS LOG FOR SENSITIVE INFORMATION BEFORE SHARING !!
+
+Dart Code extension: 3.51.20221010
+Flutter extension: 3.50.0 (not activated)
+
+App: Visual Studio Code
+Version: 1.72.2
+Platform: win
+
+HTTP_PROXY: undefined
+NO_PROXY: undefined
+
+Logging Categories:
+    FlutterDaemon
+
+Tue Oct 25 2022 [08:20:09 GMT+0700 (Indochina Time)] Log file started
+[8:20:09 AM] [FlutterDaemon] [Info] Spawning C:\dev\flutter\bin\flutter.bat with args ["daemon"]
+[8:20:09 AM] [FlutterDaemon] [Info] ..  in C:\dev\flutter
+[8:20:09 AM] [FlutterDaemon] [Info] ..  with {"toolEnv":{"FLUTTER_HOST":"VSCode","PUB_ENVIRONMENT":"vscode.dart-code"}}
+[8:20:09 AM] [FlutterDaemon] [Info]     PID: 12624
+[8:20:09 AM] [FlutterDaemon] [Info] ==> [{"id":"1","method":"emulator.getEmulators"}]
+[8:20:10 AM] [FlutterDaemon] [Info] <== [{"event":"daemon.connected","params":{"version":"0.6.1","pid":16356}}]
+[8:20:10 AM] [FlutterDaemon] [Info] ==> [{"id":"2","method":"device.enable"}]
+[8:20:10 AM] [FlutterDaemon] [Info] <== [{"event":"daemon.logMessage","params":{"level":"status","message":"Starting device daemon..."}}]
+[8:20:10 AM] [FlutterDaemon] [Info] <== [{"id":"2"}]
+[8:20:10 AM] [FlutterDaemon] [Info] <== [{"id":"1","result":[{"id":"Pixel_3a_API_33_x86_64","name":"Pixel_3a_API_33_x86_64","category":"mobile","platformType":"android"}]}]
+[8:20:14 AM] [FlutterDaemon] [Info] <== [{"event":"device.added","params":{"id":"windows","name":"Windows","platform":"windows-x64","emulator":false,"category":"desktop","platformType":"windows","ephemeral":false,"emulatorId":null}}]
+[8:20:14 AM] [FlutterDaemon] [Info] ==> [{"id":"3","method":"daemon.getSupportedPlatforms","params":{"projectRoot":"D:\\newflutter\\app_mobi"}}]
+[8:20:14 AM] [FlutterDaemon] [Info] <== [{"id":"3","result":{"platforms":["ios","android"]}}]
+[8:20:14 AM] [FlutterDaemon] [Info] <== [{"event":"device.added","params":{"id":"R58M60LTRPL","name":"SM A705F","platform":"android-arm64","emulator":false,"category":"mobile","platformType":"android","ephemeral":true,"emulatorId":null}}]
+[8:26:02 AM] [FlutterDaemon] [Info] ==> [{"id":"4","method":"daemon.shutdown"}]
+[8:26:02 AM] [FlutterDaemon] [Info] <== [{"id":"4"}]
+Tue Oct 25 2022 [08:26:02 GMT+0700 (Indochina Time)] Log file ended
