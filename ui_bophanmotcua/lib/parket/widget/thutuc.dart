@@ -1,11 +1,14 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ThuTuc extends StatelessWidget {
   String name;
+  String id;
   ThuTuc({
     Key? key,
     required this.name,
+    required this.id,
   }) : super(key: key);
 
   @override
@@ -29,10 +32,7 @@ class ThuTuc extends StatelessWidget {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
-            onTap: () {
-              // ignore: avoid_print
-              print("$name ");
-            },
+            onTap: () => GoRouter.of(context).go('/Home2/$id'),
           ),
         ),
       ),

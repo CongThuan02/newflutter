@@ -13,7 +13,10 @@ class _AppBarsState extends State<AppBars> {
     return SizedBox(
       child: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.edit), label: 'home'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.edit),
+            label: 'home',
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.history), label: 'lich sử'),
         ],
       ),

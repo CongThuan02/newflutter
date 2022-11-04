@@ -7,115 +7,30 @@ import 'package:ui_bophanmotcua/parket/widget/thutuc.dart';
 class HomeScreen extends StatelessWidget {
   // ignore: prefer_const_constructors_in_immutables
   HomeScreen({Key? key}) : super(key: key);
-  List<ThuTuc> thutucs = [
-    ThuTuc(
-      name: "Thủ tục 3. Phúc khảo điểm thi kết thúc học phần",
-    ),
-    ThuTuc(
-      name: "Thủ tục 4. Kiểm tra kết quả học tập",
-    ),
-    ThuTuc(
-      name: "Thủ tục 5. Nhập học trở lại đối với sinh viên nghỉ học tạm thời",
-    ),
-    ThuTuc(
-      name: "Thủ tục 6. Thôi học",
-    ),
-    ThuTuc(
-      name: "Thủ tục 7. Học chương trình thứ 2",
-    ),
-    ThuTuc(
-      name: "	Thủ tục 8. Nghỉ học tạm thời",
-    ),
-    ThuTuc(
-      name: "Thủ tục 9. Mở lớp theo yêu cầu (cho sinh viên năm cuối) ",
-    ),
-    ThuTuc(
-      name: "	Thủ tục 10. Ghép lớp",
-    ),
-    ThuTuc(
-      name: "Thủ tục 11. Rút bớt học phần",
-    ),
-    ThuTuc(
-      name: "Thủ tục 12. Xác nhận học phần tương đương, học phần thay thế",
-    ),
-    ThuTuc(
-      name: "Thủ tục 13. Xác nhận học phần tự chọn không tham gia tính điểm",
-    ),
-    ThuTuc(
-      name: "Thủ tục 14. Đi thực tập sản xuất, thực tập tốt nghiệp",
-    ),
-    ThuTuc(
-      name: "Thủ tục 15. Đổi địa điểm thực tập sản xuất, thực tập tốt nghiệp",
-    ),
-    ThuTuc(
-      name: "Thủ tục 16. Làm đồ án tốt nghiệp",
-    ),
-    ThuTuc(
-      name: "	Thủ tục 17. Bảo vệ đồ án tốt nghiệp (dành cho sinh viên bảo vệ sớm hoặc chậm)",
-    ),
-    ThuTuc(
-      name: "Thủ tục 18. Cấp lại bảng điểm",
-    ),
-    ThuTuc(
-      name: "Thủ tục 20. Cấp bản sao bằng tốt nghiệp đại học, cao đẳng thay bằng đã mất",
-    ),
-    ThuTuc(
-      name: "	Thủ tục 21. Cấp lại mật khẩu đăng ký học phần",
-    ),
-    ThuTuc(
-      name: "Thủ tục 22. Hiệu chỉnh thông tin hồ sơ",
-    ),
-    ThuTuc(
-      name: "Thủ tục 23. Xác nhận thông tin theo yêu cầu",
-    ),
-    ThuTuc(
-      name: "Thủ tục 24. Xác nhận làm thẻ xe buýt",
-    ),
-    ThuTuc(
-      name: "Thủ tục 25. Xác nhận chế độ chính sách tại địa phương",
-    ),
-    ThuTuc(
-      name: "Thủ tục 26. Cấp giấy giới thiệu",
-    ),
-    ThuTuc(
-      name: "	Thủ tục 27. Vay vốn ngân hàng chính sách",
-    ),
-    ThuTuc(
-      name: "Thủ tục 28. Xác nhận là Sinh viên không vi phạm kỷ luật",
-    ),
-    ThuTuc(
-      name: "Thủ tục 29. Xác nhận là Sinh viên đã từng học tại trường",
-    ),
-    ThuTuc(
-      name: "Thủ tục 30. Đề nghị miễn giảm học phí, hỗ trợ chi phí học tập, xét trợ cấp xã hội",
-    ),
-    ThuTuc(
-      name: "Thủ tục 31. Đề nghị giải quyết chế độ bảo hiểm thân thể",
-    ),
-    ThuTuc(
-      name: "Thủ tục 32. Đề nghị cấp lại thẻ sinh viên",
-    ),
-    ThuTuc(
-      name: "	Thủ tục 33. Xác nhận điểm rèn luyện",
-    ),
-    ThuTuc(
-      name: "Thủ tục 34. Xin hoãn thi kết thúc học phần",
-    ),
-    ThuTuc(
-      name: "Thủ tục 35. Xin thi bù do hoãn thi kết thúc học phần",
-    ),
-    ThuTuc(
-      name: "Thủ tục 36. Thanh toán tiền hỗ trợ thực tập tốt nghiệp",
-    ),
-    ThuTuc(
-      name: "Mẫu Giấy thanh toán ra trường",
-    ),
-    ThuTuc(
-      name: "	Thủ tục 37: Thanh toán tiền Tết Nguyên đán cho sinh viên",
-    ),
-    ThuTuc(
-      name: "	Thủ tục 38: Thanh toán tiền học phí (đóng dư) cho người học",
-    ),
+  List<String> thutucs = [
+    "thu tuc 1",
+    "thu tuc 2",
+    "thu tuc 3",
+    "thu tuc 4",
+    "thu tuc 5",
+    "thu tuc 6",
+    "thu tuc 7",
+    "thu tuc 8",
+    "thu tuc 9",
+    "thu tuc 10",
+    "thu tuc 11",
+    "thu tuc 12",
+    "thu tuc 13",
+    "thu tuc 14",
+    "thu tuc 15",
+    "thu tuc 16",
+    "thu tuc 17",
+    "thu tuc 18",
+    "thu tuc 19",
+    "thu tuc 20",
+    "thu tuc 21",
+    "thu tuc 22",
+
   ];
 
   @override
@@ -169,7 +84,8 @@ class HomeScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 final iteam = thutucs[index];
                 return ThuTuc(
-                  name: iteam.name,
+                  name: iteam,
+                  id: index.toString(),
                 );
               },
             ),

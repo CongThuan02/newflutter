@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import 'package:ui_bophanmotcua/parket/widget/appbar.dart';
 import 'package:ui_bophanmotcua/parket/widget/home.dart';
+import 'package:ui_bophanmotcua/parket/widget/manhinh2.dart';
+import 'package:ui_bophanmotcua/parket/widget/thutuc.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,15 +28,13 @@ class MyApp extends StatelessWidget {
       GoRoute(
         path: '/',
         builder: (context, state) {
-          return Home();
+          return const Home();
         },
       ),
       GoRoute(
-        path: '/AppBars',
-        builder: (context, state) {
-          return AppBars();
-        },
-      ),
+        path: '/Home2/:id',
+        builder: (context, state) => Home2(id: state.params["id"]!, name: state.params["name"]!,),
+      )
     ],
   );
 }
