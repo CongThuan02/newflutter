@@ -30,26 +30,33 @@ class HomeScreen extends StatelessWidget {
     "thu tuc 20",
     "thu tuc 21",
     "thu tuc 22",
-
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
-          onPressed: () {},
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.arrow_back_ios),
+            ),
+            Container(
+              child: const Text(
+                "Bộ phận một cửa",
+              ),
+            ),
+            IconButton(
+              icon: const Icon(
+                Icons.dark_mode,
+                color: Colors.black,
+              ),
+              onPressed: () {},
+            )
+          ],
         ),
-        title: const Center(child: Text("ĐƠN XIN CẤP GIẤY CHỨNG NHẬN ĐÃ BẢO VỆ TỐT NGHIỆP")),
-        actions: [
-          IconButton(
-            onPressed: () {
-              print("dark mode");
-            },
-            icon: const Icon(Icons.dark_mode_outlined),
-          )
-        ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

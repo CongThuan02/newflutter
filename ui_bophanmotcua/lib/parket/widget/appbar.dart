@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class AppBars extends StatefulWidget {
   const AppBars({Key? key}) : super(key: key);
@@ -19,6 +20,9 @@ class _AppBarsState extends State<AppBars> {
           ),
           BottomNavigationBarItem(icon: Icon(Icons.history), label: 'lich sử'),
         ],
+        onTap: (index) {
+          if (index == 1) return GoRouter.of(context).go('/home3');
+        },
       ),
     );
   }

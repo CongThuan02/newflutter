@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:ui_bophanmotcua/parket/widget/lichsudon.dart';
 
 import 'package:ui_bophanmotcua/parket/widget/home.dart';
 import 'package:ui_bophanmotcua/parket/widget/manhinh2.dart';
-import 'package:ui_bophanmotcua/parket/widget/thutuc.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,18 +11,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      title: 'hoang cong thuan',
-      routeInformationParser: _router.routeInformationParser,
-      routerDelegate: _router.routerDelegate,
-    );
-  }
-
-  // ignore: dead_code
   final GoRouter _router = GoRouter(
     routes: <GoRoute>[
       GoRoute(
@@ -32,9 +20,25 @@ class MyApp extends StatelessWidget {
         },
       ),
       GoRoute(
+        path: '/home3',
+        builder: (context, state) {
+          return Home3();
+        },
+      ),
+      GoRoute(
         path: '/Home2/:id',
-        builder: (context, state) => Home2(id: state.params["id"]!, name: state.params["name"]!,),
+        builder: (context, state) => Home2(id: state.params["id"]!),
       )
     ],
   );
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
+      routerConfig: _router,
+      debugShowCheckedModeBanner: false,
+    );
+
+    // ignore: dead_code
+  }
 }
